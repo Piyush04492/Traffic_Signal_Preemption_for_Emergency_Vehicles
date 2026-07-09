@@ -1,0 +1,12 @@
+<routes>
+    <vType id="civilian" accel="2.5" decel="4.5" length="5.0" maxSpeed="15.0" sigms="0.5"/>
+    <vType id="ambulance" accel="4.5" decel="6.0" length="6.5" maxSpeed="25.0" guiShape="emergency"/>
+
+    <route id="west_to_east" edges="w2c c2e"/>
+    <route id="north_to_south" edges="n2c c2s"/>
+
+    <vehicle id="car_1" type="civilian" route="west_to_east" depart="0" departPos="10" departSpeed="12"/>
+    <vehicle id="car_2" type="civilian" route="west_to_east" depart="2" departPos="10" departSpeed="12"/>
+    <vehicle id="ambulence_ev" type="ambulance" route="north_to_south" depart="3" departPos="0" departSpeed="20"/>
+    <vehicle id="car_3" type="civilian" route="west_to_east" depart="4" departPos="10" departSpeed="12"/>
+</routes>
