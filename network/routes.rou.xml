@@ -1,0 +1,63 @@
+<routes>
+    <!-- === Vehicle Types === -->
+    <!-- Passenger car -->
+    <vType id="car"   accel="2.6" decel="4.5" length="4.5" width="1.8"
+           minGap="2.5" maxSpeed="13.89" sigma="0.5"
+           color="0.55,0.55,0.60" guiShape="passenger"/>
+
+    <!-- City bus -->
+    <vType id="bus"   accel="1.4" decel="3.5" length="12.0" width="2.5"
+           minGap="3.0" maxSpeed="11.11" sigma="0.4"
+           color="0.20,0.45,0.80" guiShape="bus"/>
+
+    <!-- Delivery truck -->
+    <vType id="truck" accel="1.2" decel="3.0" length="16.0" width="2.6"
+           minGap="4.0" maxSpeed="9.72"  sigma="0.3"
+           color="0.30,0.30,0.30" guiShape="truck"/>
+
+    <!-- Motorcycle -->
+    <vType id="moto"  accel="3.8" decel="5.5" length="2.2" width="0.9"
+           minGap="1.5" maxSpeed="16.67" sigma="0.6"
+           color="1.00,0.80,0.00" guiShape="motorcycle"/>
+
+    <!-- Emergency ambulance -->
+    <vType id="ambulance" accel="5.0" decel="6.5" length="8.0" width="2.4"
+           minGap="1.5" maxSpeed="22.22" sigma="0.0"
+           guiShape="emergency" color="1,0,0"/>
+
+    <!-- === Routes === -->
+    <route id="main_corridor" edges="w2c1 c12c2 c22e"/>
+    <route id="cross_1"       edges="n12c1 c12s1"/>
+    <route id="cross_2"       edges="n22c2 c22s2"/>
+
+    <!-- === Civilian Traffic Flows (mixed types) === -->
+    <!-- Main corridor: cars 50%, buses 15%, trucks 10%, motos 25% -->
+    <flow id="fc_car"   type="car"   route="main_corridor" begin="0" end="150"
+          probability="0.1500" departSpeed="max" departLane="best"/>
+    <flow id="fc_bus"   type="bus"   route="main_corridor" begin="0" end="150"
+          probability="0.0450" departSpeed="max" departLane="best"/>
+    <flow id="fc_truck" type="truck" route="main_corridor" begin="0" end="150"
+          probability="0.0300" departSpeed="max" departLane="best"/>
+    <flow id="fc_moto"  type="moto"  route="main_corridor" begin="0" end="150"
+          probability="0.0750" departSpeed="max" departLane="best"/>
+
+    <!-- Cross street 1 -->
+    <flow id="fx1_car"  type="car"   route="cross_1" begin="0" end="150"
+          probability="0.1200" departSpeed="max" departLane="best"/>
+    <flow id="fx1_moto" type="moto"  route="cross_1" begin="0" end="150"
+          probability="0.0600" departSpeed="max" departLane="best"/>
+    <flow id="fx1_bus"  type="bus"   route="cross_1" begin="0" end="150"
+          probability="0.0300" departSpeed="max" departLane="best"/>
+
+    <!-- Cross street 2 -->
+    <flow id="fx2_car"  type="car"   route="cross_2" begin="0" end="150"
+          probability="0.1200" departSpeed="max" departLane="best"/>
+    <flow id="fx2_moto" type="moto"  route="cross_2" begin="0" end="150"
+          probability="0.0600" departSpeed="max" departLane="best"/>
+    <flow id="fx2_truck" type="truck" route="cross_2" begin="0" end="150"
+          probability="0.0150" departSpeed="max" departLane="best"/>
+
+    <!-- === Emergency Vehicle === -->
+    <vehicle id="ambulence_ev" type="ambulance" route="main_corridor"
+             depart="15" departPos="0" departSpeed="16.67" departLane="1"/>
+</routes>

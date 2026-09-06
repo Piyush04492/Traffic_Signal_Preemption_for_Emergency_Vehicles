@@ -1,0 +1,14 @@
+<nodes>
+    <node id="west"   x="-200" y="0"    type="priority"/>
+    <node id="c1"     x="200"  y="0"    type="traffic_light"/>
+    <node id="c2"     x="600"  y="0"    type="traffic_light"/>
+    <node id="east"   x="1000" y="0"    type="priority"/>
+    
+    <!-- Intersection 1 cross nodes -->
+    <node id="north1" x="200"  y="250"  type="priority"/>
+    <node id="south1" x="200"  y="-250" type="priority"/>
+    
+    <!-- Intersection 2 cross nodes -->
+    <node id="north2" x="600"  y="250"  type="priority"/>
+    <node id="south2" x="600"  y="-250" type="priority"/>
+</nodes>

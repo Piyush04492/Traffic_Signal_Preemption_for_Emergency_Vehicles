@@ -1,0 +1,16 @@
+<additional>
+    <!-- C1: long EW-red so ambulance always arrives during red -->
+    <tlLogic id="c1" type="static" programID="custom" offset="0">
+        <phase duration="200" state="GGGGrrrr"/>
+        <phase duration="5"   state="yyyyrrrr"/>
+        <phase duration="20"  state="rrrrGGGG"/>
+        <phase duration="5"   state="rrrryyyy"/>
+    </tlLogic>
+    <!-- C2: same cycle, offset by 10s so EV doesn't catch green by accident -->
+    <tlLogic id="c2" type="static" programID="custom" offset="10">
+        <phase duration="200" state="GGGGrrrr"/>
+        <phase duration="5"   state="yyyyrrrr"/>
+        <phase duration="20"  state="rrrrGGGG"/>
+        <phase duration="5"   state="rrrryyyy"/>
+    </tlLogic>
+</additional>

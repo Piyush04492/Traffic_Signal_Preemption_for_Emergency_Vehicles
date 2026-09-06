@@ -1,0 +1,11 @@
+<viewsettings>
+    <viewport zoom="180" x="400" y="0"/>
+    <delay value="30"/>
+    <scheme name="standard">
+        <background backgroundColor="white" showGrid="0"/>
+        <edges laneShowBorders="1" edgeScaleSchema="0" edgeColorMode="6" edgeScaleMode="0" showBikeMarkings="1" showLinkDecals="1" showRails="1" showLaneChangePreference="0" showReachability="0" edgeValue="0" edgeValueHideCheck="0" edgeValueHideCheck2="0" edgeValueThreshold="0" edgeValueThreshold2="1" laneEdgeMode="0" laneScaleMode="0" laneShowSpeed="0" showEdgeName="1" showInternalEdgeName="0" showCwaEdgeName="0" showMesoEdgeName="0" edgeName.size="40" edgeName.color="255,0,255" internalEdgeName.size="40" internalEdgeName.color="255,0,255" cwaEdgeName.size="40" cwaEdgeName.color="255,0,255" mesoEdgeName.size="40" mesoEdgeName.color="255,0,255"/>
+        <vehicles vehicleMode="0" vehicleQuality="2" minVehicleSize="1" vehicleExaggeration="3" showBlinker="1" drawLaneChangePreference="0" showMinGap="0" showBTRange="0" showRouteIndex="0" scaleLength="1" drawReversed="0" showParkingInfo="0" vehicleName_show="0" vehicleName_size="50" vehicleName_color="195,0,255" vehicleValue_show="0" vehicleValue_size="46" vehicleValue_color="0,0,255" vehicleScaleValue_show="0" vehicleScaleValue_size="46" vehicleScaleValue_color="0,0,255" vehicleText_show="0" vehicleText_size="50" vehicleText_color="0,128,0"/>
+        <junctions drawShape="1" drawCrossingsAndWalkingareas="1" junctionSize="2" junctionExaggeration="1" junctionName_show="1" junctionName_size="50" junctionName_color="128,0,255" tlsPhase_show="0" tlsPhaseIndex_show="0" junctionID_show="1" junctionID_size="50" junctionID_color="128,0,255"/>
+        <pois poiSize="0" poiExaggeration="1" poiName_show="1" poiName_size="40" poiName_color="255,0,0"/>
+    </scheme>
+</viewsettings>

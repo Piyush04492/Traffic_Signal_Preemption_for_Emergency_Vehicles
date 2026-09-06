@@ -1,0 +1,14 @@
+<edges>
+    <!-- Main corridor edges -->
+    <edge id="w2c1"  from="west"   to="c1"     numLanes="3" speed="16.67" priority="3"/>
+    <edge id="c12c2" from="c1"     to="c2"     numLanes="3" speed="16.67" priority="3"/>
+    <edge id="c22e"  from="c2"     to="east"   numLanes="3" speed="16.67" priority="3"/>
+    
+    <!-- Cross street 1 edges -->
+    <edge id="n12c1" from="north1" to="c1"     numLanes="2" speed="13.89" priority="2"/>
+    <edge id="c12s1" from="c1"     to="south1" numLanes="2" speed="13.89" priority="2"/>
+    
+    <!-- Cross street 2 edges -->
+    <edge id="n22c2" from="north2" to="c2"     numLanes="2" speed="13.89" priority="2"/>
+    <edge id="c22s2" from="c2"     to="south2" numLanes="2" speed="13.89" priority="2"/>
+</edges>
