@@ -40,7 +40,6 @@ The difference lies in **reliable communication range** combined with traffic li
 * **`app.py`**: A modern **Streamlit** dashboard serving as the user interface. It lets users configure parameters (traffic density, latencies, packet loss), trigger simulations, and review detailed comparison metrics and charts.
 * **`simulation_engine.py`**: The simulation runner that initiates SUMO, starts TraCI, runs the multi-intersection scenario (corridor with intersections `c1` and `c2`), executes real-time preemption logic, and collects statistics.
 * **`v2x_emergency_sim.py`**: A simpler, standalone command-line / GUI script demonstrating single-intersection V2I preemption. It prompts the user for the network profile (4G or 5G) and displays an in-simulation HUD overlay.
-* **`generate_pdf.py`**: Generates a professional technical report PDF (`V2X_Project_Explanation.pdf`) using ReportLab, covering key concepts and interview preparation questions.
 * **`network/`**:
   * **`generate_network.py`**: Programmatically generates SUMO node (`.nod.xml`), edge (`.edg.xml`), route (`.rou.xml`), and configuration (`.sumocfg`) files based on civilian traffic density.
   * `network.net.xml`, `routes.rou.xml`, `sumo.sumocfg`: Generated files representing the double-intersection road network and traffic flows.
@@ -84,7 +83,6 @@ python v2x_emergency_sim.py
 ### Option C: Generate the Explanatory PDF
 Compile the comprehensive technical summary and Q&A handbook:
 ```bash
-python generate_pdf.py
 ```
 This generates the file `V2X_Project_Explanation.pdf` in the root folder.
 
