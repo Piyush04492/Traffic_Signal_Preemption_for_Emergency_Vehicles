@@ -26,14 +26,6 @@ This project evaluates the performance trade-offs of this technology and compare
 | **EV Stopped Delay** | High (~5.2s) | Low (~1.1s due to brief stop/slowdown) | **0.0 seconds** (Perfect preemption) |
 | **Civilian Traffic Delay** | Lowest | Medium | Optimized (restores normal flow immediately) |
 
-### 🔍 The Core Technical Insight: Latency vs. Clearance Phase
-In an interview or technical review, a common question is: *If 4G latency is 50ms and 5G is 2ms, why does 5G perform so much better? Both network delays are small fractions of a second.*
-
-The difference lies in **reliable communication range** combined with traffic light **safety yellow clearance phases**:
-* **Traffic Safety Rule:** When a traffic light receives a preemption request, it cannot instantly turn green for the ambulance. It must transition through a **4.0-second yellow clearance phase** to let cross-street civilian vehicles safely clear the intersection.
-* **The 5G Advantage:** With a **100m communication range** (direct PC5 sidelink), the 5G system registers the preemption request about **6.0 seconds** before the ambulance reaches the junction. This allows the 4.0-second yellow phase to complete *before* the ambulance arrives, enabling it to cross at full speed (60 km/h) without stopping.
-* **The 4G Bottleneck:** Due to cellular localization and routing limits, 4G has a reliable range of only **40m** in this simulation. The preemption request is received only **2.4 seconds** before the ambulance arrives. Consequently, the 4.0-second yellow phase is still active when the ambulance reaches the stop line, forcing it to brake and lose momentum.
-
 ---
 
 ## 📂 Project Directory Structure
